@@ -1,5 +1,7 @@
 ---
 import '@fontsource/open-sans';
+
+const {title}= Astro.props
 ---
 
 
@@ -10,7 +12,7 @@ import '@fontsource/open-sans';
   />
   <div class="poster-content">
     <div class="poster-year">2012</div>
-    <h2 class="poster-title">Medalla San Rafael Arcángel</h2>
+    <h2 class="poster-title">{title}</h2>
     <p class="poster-desc">
       Condecoración la confiere la Alcaldía de Medellín como muestra de reconocimiento y gratitud a las personas que se destacan por su labor en pro de construir una mejor ciudad.
     </p>
@@ -21,28 +23,18 @@ import '@fontsource/open-sans';
 
 <style>
   .poster {
-    width: 280px;
-    box-shadow: 3px 3px 4px #00000015;
-    border-radius: 5px;
-    background-color: #fff;
-    overflow: hidden;
+    @apply w-72 bg-white rounded-md overflow-hidden shadow-xl;
   }
   .poster-content {
-    padding: 1rem;
+    @apply p-4;
   }
   .poster-year {
-    color: #16993b;
-    font-weight: 700;
-    font-size: 1rem;
+    @apply text-as-green font-bold;
   }
   .poster-title {
-    color: #005fe2;
-    line-height: 1.25;
-    font-size: 1.2rem;
+    @apply text-as-blue text-lg font-bold;
   }
   .poster-desc {
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: #3e3e3e;
+    @apply text-as-black font-sans text-sm;
   }
   </style>

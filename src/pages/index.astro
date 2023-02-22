@@ -11,10 +11,26 @@ import Poster from '../components/Poster.astro';
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
-		<div class="flex gap-4 mb-4">
-			<Poster title="my title"/>
-			<Poster title="other title"/>
-			<Poster title="title"/>
+		<div class="flex gap-4 mb-4 flex-wrap">
+			<Poster
+				img="https://d2xt7650da4t25.cloudfront.net/s3fs-public/styles/image_card/public/2021-02/premio-excelencia-inmobiliaria-plan-maestro-suramerica-2%28280x200%29.jpg?itok=6SphuFfa"
+				title="Premio Excelencia Inmobiliaria Ciudadela Suramérica La Estrella"
+				year="2007"
+				description="Otorgado por la  FIABCI. Categoría Residencial. Ciudadela Suramérica La Estrella- Antioquia en el "
+				/>
+			<Poster
+				img="https://d2xt7650da4t25.cloudfront.net/s3fs-public/styles/image_card/public/2021-01/premio-excelencia-en-concreto-asocreto-epm-coninsa-280x200.jpg?itok=P8nxlLnI"
+				title="Premio Excelencia en Concreto"
+				year="2006"
+				description="Concedida por ASOCRETO. Categoría Arquitectura en Concreto.Centro de Distribución ARGOS Medellín. Año 2006."
+				/>
+			<Poster
+				img="https://d2xt7650da4t25.cloudfront.net/s3fs-public/styles/image_card/public/2021-02/sai-instemblematicantioquia-2019-280x200.jpg?itok=HSbdIENu"
+				title="Institución Emblemática de Antioquia"
+				year="2019"
+				description="Condecoración de La SOCIEDAD ANTIOQUEÑA DE INGENIEROS Y ARQUITECTOS (SAI)"
+				/>
+
 		</div>
 
 		<ul role="list" class="link-card-grid">
@@ -46,7 +62,7 @@ import Poster from '../components/Poster.astro';
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 1024px;
 	}
 	h1 {
 		font-size: 3rem;

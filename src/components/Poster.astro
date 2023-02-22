@@ -1,7 +1,7 @@
 ---
 import '@fontsource/open-sans';
 
-const {img, title, year, description}= Astro.props
+const {img, year}= Astro.props
 ---
 
 
@@ -10,8 +10,12 @@ const {img, title, year, description}= Astro.props
 
   <div class="poster-content">
     <div class="poster-year">{year}</div>
-    <h2 class="poster-title">{title}</h2>
-    <p class="poster-desc">{description}</p>
+    <h2 class="poster-title">
+      <slot name="title" />
+    </h2>
+    <p class="poster-desc">
+      <slot />
+    </p>
   </div>
 
 </div>
@@ -30,6 +34,11 @@ const {img, title, year, description}= Astro.props
   .poster-title {
     @apply text-as-blue text-lg font-bold leading-5 pb-4;
   }
+
+  .poster-title :global(a:hover) {
+    @apply text-black;
+  }
+
   .poster-desc {
     @apply text-as-black font-sans text-sm;
   }

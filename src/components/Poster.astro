@@ -1,21 +1,17 @@
 ---
 import '@fontsource/open-sans';
 
-const {title}= Astro.props
+const {img, title, year, description}= Astro.props
 ---
 
 
 <div class="poster">
-  <img
-    src="https://d2xt7650da4t25.cloudfront.net/s3fs-public/styles/image_card/public/2021-01/medalla-sanrafaelarcangel-280x212.jpg?itok=TPjKQFNa"
-    alt=""
-  />
+  <img src={img} />
+
   <div class="poster-content">
-    <div class="poster-year">2012</div>
+    <div class="poster-year">{year}</div>
     <h2 class="poster-title">{title}</h2>
-    <p class="poster-desc">
-      Condecoración la confiere la Alcaldía de Medellín como muestra de reconocimiento y gratitud a las personas que se destacan por su labor en pro de construir una mejor ciudad.
-    </p>
+    <p class="poster-desc">{description}</p>
   </div>
 
 </div>
@@ -29,10 +25,10 @@ const {title}= Astro.props
     @apply p-4;
   }
   .poster-year {
-    @apply text-as-green font-bold;
+    @apply text-as-green font-bold mb-2;
   }
   .poster-title {
-    @apply text-as-blue text-lg font-bold;
+    @apply text-as-blue text-lg font-bold leading-5 pb-4;
   }
   .poster-desc {
     @apply text-as-black font-sans text-sm;

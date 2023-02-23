@@ -1,21 +1,19 @@
 ---
 import { Icon } from "astro-icon";
+
+const { title, desc, icon, color } = Astro.props;
 ---
 
 <div class="container">
-  <i class="icon"><Icon name="wallet" /></i>
-  <h2 class="title">Mi Coninsa Virtual</h2>
-  <p class="desc">
-    Realiza el pago de tu factura. Consulta tu estado de cuenta y otras
-    transacciones en Mi Coninsa Virtual.
-  </p>
+  <i class="icon"><Icon name={icon} /></i>
+  <h2 class="title">{title}</h2>
+  <p class="desc">{desc}</p>
 </div>
 
-<style>
+<style define:vars={{ color }}>
   .container {
     @apply shadow
       bg-white
-      hover:bg-as-blue-dark
       w-64
       px-4
       pt-16
@@ -26,13 +24,18 @@ import { Icon } from "astro-icon";
       rounded-md;
   }
 
+  .container:hover {
+    background-color: var(--color);
+  }
+
   .container:hover .title,
   .container:hover .desc {
     @apply text-white;
   }
 
   .icon {
-    @apply block w-28 mx-auto bg-as-blue-dark rounded-full p-6 mb-6 absolute -top-16 left-1/2 -ml-14;
+    @apply block w-28 mx-auto rounded-full p-6 mb-6 absolute -top-16 left-1/2 -ml-14;
+    background-color: var(--color);
   }
 
   svg {

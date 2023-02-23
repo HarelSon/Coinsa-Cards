@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="container">
+  <i class="icon"><Icon name="wallet" /></i>
+  <h2 class="title">Mi Coninsa Virtual</h2>
+  <p class="desc">
+    Realiza el pago de tu factura. Consulta tu estado de cuenta y otras
+    transacciones en Mi Coninsa Virtual.
+  </p>
+</div>
+
+<style>
+  .container {
+    @apply shadow
+      bg-white
+      hover:bg-as-blue-dark
+      w-64
+      px-4
+      pt-16
+      pb-6
+      cursor-pointer
+      relative
+      mt-20
+      rounded-md;
+  }
+
+  .container:hover .title,
+  .container:hover .desc {
+    @apply text-white;
+  }
+
+  .icon {
+    @apply block w-28 mx-auto bg-as-blue-dark rounded-full p-6 mb-6 absolute -top-16 left-1/2 -ml-14;
+  }
+
+  svg {
+    @apply text-white;
+  }
+
+  .title {
+    @apply text-as-blue text-lg text-center font-bold pb-2;
+  }
+
+  .desc {
+    @apply text-as-black text-sm text-center;
+  }
+</style>

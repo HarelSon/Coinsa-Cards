@@ -8,9 +8,10 @@ module.exports = {
 			},
 			colors:{
 				as:{
-					blue: "#005fe2",
+					blue: "rgb(0, 95, 226)",
+					"blue-dark": "#273475",
 					green: "#16993b",
-					black: "#3e3e3e"
+					black: "rgb(51, 51, 51)",
 				}
 			}
 		},

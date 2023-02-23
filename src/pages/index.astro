@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Poster from '../components/Poster.astro';
+import FeaturedCard from '../components/FeaturedCard.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -41,6 +42,14 @@ import Poster from '../components/Poster.astro';
 					Institución Emblemática de <a href="#">Antioquia</a>
 				</div>
 				</Poster>
+		</div>
+
+		<div class="flex gap-4 mb-4 flex-wrap">
+
+			<FeaturedCard />
+			<FeaturedCard />
+			<FeaturedCard />
+
 		</div>
 
 		<ul role="list" class="link-card-grid">

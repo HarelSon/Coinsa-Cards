@@ -33,6 +33,10 @@ const { title, desc, icon, color } = Astro.props;
     @apply text-white;
   }
 
+  .container:hover .icon {
+    @apply shadow-md;
+  }
+
   .icon {
     @apply block w-28 mx-auto rounded-full p-6 mb-6 absolute -top-16 left-1/2 -ml-14;
     background-color: var(--color);

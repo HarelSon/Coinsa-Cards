@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/tailwind': ^3.0.1
   '@fontsource/open-sans': ^4.5.14
+  '@fontsource/oswald': ^4.5.12
   astro: ^2.0.14
   astro-icon: ^0.8.0
   tailwindcss: ^3.0.24
@@ -10,6 +11,7 @@ specifiers:
 dependencies:
   '@astrojs/tailwind': 3.0.1_hf2kjfio2dr6w52rh4mpociq2u
   '@fontsource/open-sans': 4.5.14
+  '@fontsource/oswald': 4.5.12
   astro: 2.0.14
   astro-icon: 0.8.0
   tailwindcss: 3.2.7
@@ -565,6 +567,10 @@ packages:
 
   /@fontsource/open-sans/4.5.14:
     resolution: {integrity: sha512-mBXIIETBlW8q/ocuUN0hyGow2iuf75hQEHQt8R/RJ/HcphVbLg8KB7pHYGbFGDqs75W+SWvTC7JkVeAjT65BuQ==}
+    dev: false
+
+  /@fontsource/oswald/4.5.12:
+    resolution: {integrity: sha512-UAduJgOpCQzf+SnuatQ7ANWRIGPD2GXh3CfvJ4YTlbhGM0bQYCwHL/5u+YFjZzidBMXspzV/k33PPxwOrmuaew==}
     dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
